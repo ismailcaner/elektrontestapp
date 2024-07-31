@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Calendar } from "@/components/ui/calendar";
 import { tr } from 'date-fns/locale';
+import PlusSignIcon from '../icon'; 
 
 export default function Home() {
   const [db, setDb] = useState(null);
@@ -170,7 +171,7 @@ export default function Home() {
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-          <DialogTrigger style={{ border: '1px solid black', padding: '5px 15px', borderRadius: 15 }} onClick={() => setDialogOpen(true)}>Ekle</DialogTrigger>
+          <DialogTrigger style={{ border: '1px solid black', padding:5, borderRadius: 100 }} onClick={() => setDialogOpen(true)}> <PlusSignIcon style={{ color: 'black', width: 25, height: 25 }} /></DialogTrigger>
           <DialogContent>
             <span>Ürün adı</span>
             <Input
